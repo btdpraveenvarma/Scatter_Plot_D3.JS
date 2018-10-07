@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scatter Plot chart in D3 </title>
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+</head>
+
+<body>
+<h3>Scatter Plot chart in D3 </h3>
+<div id="options">
+<p><span>Select x-axis</span>
+<label>
+    <select id="x-value" onchange="setGraph()">
+      <option value="All_Industries_Total">All Industries Total</option>
+      <option value="Total_Manufacturing">Total Manufacturing</option>
+      <option value="Wholesale_Trade">Wholesale Trade</option>
+      <option value="Retail_Trade">Retail Trade</option>
+      <option value="Information">Information</option>
+      <option value="Finance_and_insurance">Finance and insurance</option>
+      <option value="Real_estate_and_rental_and_leasing">Real estate and rental and leasing</option>
+      <option value="Professional_scientific_and_technical_services">Professional scientific and technical services</option>
+      <option value="Other_Industries">Other Industries</option>
+    </select>
+</label>
+
+<p><span>Select y-axis</span>
+<label>
+  <select id="y-value" onchange="setGraph()">
+    <option value="All_Industries_Total">All Industries Total</option>
+    <option value="Total_Manufacturing">Total Manufacturing</option>
+    <option value="Wholesale_Trade">Wholesale Trade</option>
+    <option value="Retail_Trade">Retail Trade</option>
+    <option value="Information">Information</option>
+    <option value="Finance_and_insurance">Finance and insurance</option>
+    <option value="Real_estate_and_rental_and_leasing">Real estate and rental and leasing</option>
+    <option value="Professional_scientific_and_technical_services">Professional scientific and technical services</option>
+    <option value="Other_Industries">Other Industries</option>
+  </select>
+</label>
+
+</div>
+
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
