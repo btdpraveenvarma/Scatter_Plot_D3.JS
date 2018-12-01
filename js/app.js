@@ -1,6 +1,7 @@
 /*
 * Author: TEJA DURGA PRAVEEN VARMA BUDDARAJU
 * App: Scatter Plot
+* D3 Version: d3.v5
 * Date: 07-10-2018
  */
 
