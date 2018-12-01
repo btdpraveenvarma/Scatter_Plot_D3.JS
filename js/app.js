@@ -123,7 +123,7 @@ function drawGraph(xText, yText) {
                        //.attr('x1', xScale(xValue(d))).attr('y1', xScale(xValue(d))) //todo
                        // .attr('x1', xScale(xValue(d))).attr('y1', yScale(yValue(d)))
                        //  .attr('x2', xScale(xValue(d))).attr('y2', yScale(yValue(d)))
-		  })
+		  				})
 		  .on("mouseout", function(d) {
 			  tooltip.transition()
 				   .duration(500)
@@ -134,12 +134,12 @@ function drawGraph(xText, yText) {
                       .attr('r',7)
                       .attr('stroke-width',1)
                  focus.style('display', 'none');
-		  });
+		  				});
 
 	  // draw legend
 	  var legend = svg.selectAll(".legend")
 		  .data(color.domain())
-		.enter().append("g")
+		  .enter().append("g")
 		  .attr("class", "legend")
 		  .attr("transform", (d, i) => { return "translate(" + (i) * 20 + ",100)"; })
 
@@ -154,27 +154,29 @@ function drawGraph(xText, yText) {
 	  legend.on("mouseover", function(type) {
         d3.select(this)
         d3.selectAll(".dot")
-        .filter(function(d) {
-        	if(d.Region == type)
-            return d.Region == type;
-        })
+			.filter(function(d)
+			{
+				if(d.Region == type)
+				return d.Region == type;
+			})
 			.transition()
             .duration(500)
 			.attr('r',14)
             .style("opacity", 1) // need this line to unhide dots
-        .style("stroke", "black")})
-		legend.on("mouseout", function(type) {
-        d3.select(this)
-        d3.selectAll(".dot")
-        .filter(function(d) {
-        	if(d.Region == type)
-            return d.Region == type;
-        })
+			.style("stroke", "black")})
+			legend.on("mouseout", function(type)
+			{
+			d3.select(this)
+			d3.selectAll(".dot")
+			.filter(function(d) {
+				if(d.Region == type)
+				return d.Region == type;
+			})
 			.transition()
             .duration(500)
 			.attr('r',7)
             .style("opacity", 1) // need this line to unhide dots
-        .style("stroke", "black")})
+        	.style("stroke", "black")})
 
 	  // draw legend text
 	  legend.append("text")
